@@ -126,7 +126,10 @@ public abstract class GraphAlgorithm<T> {
     	AlgorithmNode<T> Zielknoten=algorithmNodes.get(destination);
     	AlgorithmNode<T> previous=Zielknoten.previous;
     	List<Edge<T>> pfads=new ArrayList<Edge<T>>();
-    	Edge<T> kante=graph.getEdge(previous.node,Zielknoten.node);
+    	if(previous == null) {
+    		return null;
+    	}else {
+    		Edge<T> kante=graph.getEdge(previous.node,Zielknoten.node);
     	while(kante!=null) {
     		pfads.add(kante);
     		Zielknoten=Zielknoten.previous;
@@ -140,10 +143,13 @@ public abstract class GraphAlgorithm<T> {
     	}
         return null;
     }
+    	}
+    	
+    	
 
     /**
      * Gibt den betrachteten Graphen zurück
-     * @return der zu betrachtende Graph
+     * 0@return der zu betrachtende Graph
      */
     protected Graph<T> getGraph() {
         return this.graph;
