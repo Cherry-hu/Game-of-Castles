@@ -2,6 +2,7 @@
 Das Thema des Projektes ist die Strategiesimulation Game of Castles, welche an den Brettspielklassiker Risiko1 angelehnt ist. Das Spiel ist fur 2-4 Spieler und hat zum Ziel, ¨ alle Burgen zu erobern. Die Simulation spielt auf einer zweidimensionalen Karte, welche neben Gras und W¨aldern auch Gebirge und Wasser enth¨alt. Auf dieser Karte sind Burgen verschiedener K¨onigreiche verteilt und mit Pfaden untereinander verbunden.
 
 Dokumentation:
+
 Kanten bilden und überprüfen:
 
 generateEdges() :Das Ziel ist es so wenig Überschneidungen zu haben wie möglich. Um das zu erreichen, wird zuerst für jede Burg der Abstand zu allen anderen Burgen berechnet. Diese werden nun absteigend sortiert. Nun werden nur die drei nächsten Burgen miteinander verbunden um dadurch möglich wenig Überschneidung zu bekommen. 
